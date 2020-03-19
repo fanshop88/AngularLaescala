@@ -1,0 +1,8 @@
+Tu nombre de villano: <input type="text" (keyup)="nombreVillano($event)">
+<hr>
+
+<h3>Ya basta {{ nombre }}, suelta a Krillin!!!</h3>
+
+<app-compc (emisor)="recibirAccion($event)"></app-compc>
+
+<h1><img src="{{mensajeGuerrero}}"></h1>

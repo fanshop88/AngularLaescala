@@ -1,0 +1,16 @@
+<h3>calculadora</h3>
+
+<mat-grid-list cols="2" rowHeight="100px">
+    <mat-grid-tile>
+        <input type="number" [(ngModel)]="num1" class="mr-1">
+        <input type="number" [(ngModel)]="num2">
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <div class="example-button-row">
+            <button mat-raised-button class="mr-1" color="primary" (click)="calcular('s')">Sumar</button>
+            <button mat-raised-button class="mr-1" color="accent" (click)="calcular('r')">Restar</button>
+            <button mat-raised-button class="mr-1" color="warn" (click)="calcular('m')">Multiplicar</button>
+            <button mat-raised-button color="warn" (click)="calcular('d')">Dividir</button>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>

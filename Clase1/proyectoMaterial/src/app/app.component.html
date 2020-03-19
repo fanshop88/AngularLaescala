@@ -1,0 +1,14 @@
+<mat-card>
+    <app-compb [villano]="'Freezer'"></app-compb>
+</mat-card>
+<mat-card>
+    <app-compa></app-compa>
+</mat-card>
+<mat-card>
+    <app-goku [mensaje]="x"></app-goku>
+</mat-card>
+<mat-card>
+    <app-calculadora (emisor)="recibirResultado($event)"></app-calculadora>
+    <hr>
+    <p class="text-center">El resutlado es: {{ rpta }}</p>
+</mat-card>
