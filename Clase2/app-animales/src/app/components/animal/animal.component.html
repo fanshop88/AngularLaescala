@@ -1,0 +1,22 @@
+<h1 class="animated fadeIn">{{animal.nombre | uppercase}} <small>({{animal.aparicion | date:'y'}})</small></h1>
+<hr>
+<div class="row animated fadeIn fast">
+
+    <div class="col-md-4">
+        <img [src]="animal.img" class="img-fluid" alt="animal.nombre">
+        <br><br>
+        <a [routerLink]="['/animales']" class="btn btn-outline-danger btn-block">Regresar</a>
+    </div>
+
+    <div class="col-md-8">
+        <h3>{{animal.nombre}}</h3>
+        <hr>
+        <p>
+            {{animal.bio}}
+        </p>
+        <div>
+            <img *ngIf="animal.habitat == 'Terrestre'" class="img-logo" src="assets/img/tierra.jpg" alt="Terrestre">
+            <img *ngIf="animal.habitat != 'Terrestre'" class="img-logo" src="assets/img/agua.png" alt="Acuático">
+        </div>
+    </div>
+</div>

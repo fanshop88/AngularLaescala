@@ -1,0 +1,14 @@
+<div class="card animated fadeIn fast">
+    <img [src]="animal.img" class="card-img-top" [alt]="animal.nombre">
+    <div class="card-body">
+        <h5 class="card-title">{{animal.nombre}}</h5>
+        <p class="card-text">{{animal.bio}}</p>
+        <p class="card-text"><small class="text-muted">{{animal.aparicion}}</small></p>
+
+        <!--<a [routerLink]="['/animal', i]" class="btn btn-outline-primary">Ver más link...</a>-->
+        <button (click)="verAnimal()" class="btn btn-outline-primary btn-block">
+            Ver más...
+      </button>
+
+    </div>
+</div>
