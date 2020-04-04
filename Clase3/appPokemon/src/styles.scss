@@ -1,0 +1,187 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: #fff url(http://assets.pokemon.com/static2/_ui/img/chrome/container_bg.png);
+}
+
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+}
+
+.mat-toolbar {
+    background-color: #ef5350;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    position: -webkit-sticky;
+    /* For macOS/iOS Safari */
+    top: 0;
+    /* Sets the sticky toolbar to be on top */
+    z-index: 1000;
+    /* Ensure that your app's content doesn't overlap the toolbar */
+    .pokemon-logo {
+        margin-left: 50px;
+        height: 50px;
+        width: 150px;
+    }
+    .mat-icon-button,
+    .mat-icon {
+        height: 35px;
+        width: 35px;
+        line-height: 35px;
+    }
+    .search-box {
+        margin-right: 10px;
+        .search-input {
+            font-size: 16px;
+            font-weight: bold;
+            margin-left: 50px;
+            padding: 2px 5px 2px 20px;
+            width: 270px;
+            border-radius: 50px;
+            border: none;
+            outline: none !important;
+            background: white;
+        }
+        .close-button {
+            margin-left: -35px;
+        }
+    }
+    .mat-select {
+        text-transform: capitalize;
+        .additional-selection {
+            text-transform: lowercase;
+            opacity: 0.75;
+            font-size: 0.75em;
+        }
+    }
+    .filter-component {
+        margin-left: 80px;
+        .filter {
+            margin-right: 10px;
+        }
+        .form-field {
+            width: auto;
+            margin-top: 8px;
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .mat-toolbar {
+        display: table;
+        padding: 20px;
+        text-align: center;
+    }
+    .pokemon-logo {
+        display: none;
+    }
+    .search-input,
+    .search-box,
+    .filter-component {
+        margin: 5px 0px !important;
+    }
+}
+
+.grid-layout {
+    padding: 50px 0;
+    display: grid;
+    max-width: 100%;
+    grid-gap: 60px;
+    margin: 0 auto;
+    width: 95%;
+    grid-auto-rows: 300px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    .pokemon-card {
+        min-width: 180px;
+        max-width: 400px;
+        color: white;
+        background-color: rgb(35, 35, 35);
+        display: inline-block;
+        &:hover {
+            -webkit-animation-name: pulse;
+            animation-name: pulse;
+            -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            .mat-card-image {
+                transform: scale(1.1);
+            }
+        }
+        .mat-card-title {
+            font-size: 22px;
+            display: inline-flex;
+        }
+        .background-image {
+            background-color: #616161;
+            border-radius: 10px;
+            .mat-card-image {
+                margin-bottom: 0px;
+            }
+        }
+        .id {
+            font-size: 22px;
+            margin-left: 20px;
+            text-align: right;
+            display: inline-flex;
+        }
+        .mat-card-content {
+            margin: 0;
+            .types {
+                display: inline-flex;
+                margin: 15px 10px 5px 0px;
+                padding: 5px 10px;
+                text-shadow: black 1px 1px 1px;
+                border-radius: 10px;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+.loading {
+    text-align: center;
+    margin: 15% 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #673ab7;
+    .mat-spinner {
+        margin: 20px auto;
+    }
+}
