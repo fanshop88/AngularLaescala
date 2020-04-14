@@ -1,0 +1,24 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.mat-drawer {
+    background: rgba(148, 199, 247, 1);
+    background: -moz-linear-gradient(45deg, rgba(148, 199, 247, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(148, 199, 247, 1)), color-stop(100%, rgba(32, 124, 229, 1)));
+    background: -webkit-linear-gradient(45deg, rgba(148, 199, 247, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -o-linear-gradient(45deg, rgba(148, 199, 247, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(148, 199, 247, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    background: linear-gradient(45deg, rgba(148, 199, 247, 1) 0%, rgba(32, 124, 229, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#94c7f7', endColorstr='#207ce5', GradientType=1);
+    box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+}
+
+.mat-drawer-container {
+    background-color: transparent;
+}

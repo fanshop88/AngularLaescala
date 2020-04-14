@@ -1,0 +1,128 @@
+.grid-layout {
+    padding: 50px 0;
+    display: grid;
+    max-width: 100%;
+    grid-gap: 60px;
+    margin: 0 auto;
+    width: 95%;
+    grid-auto-rows: 300px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.digimon-card {
+    min-width: 180px;
+    max-width: 400px;
+    color: white;
+    background-color: rgb(35, 35, 35);
+    display: inline-block;
+}
+
+.digimon-card:hover {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.digimon-card:hover .mat-card-image {
+    transform: scale(1.1);
+}
+
+.mat-card-title {
+    font-size: 22px;
+    display: inline-flex;
+}
+
+.background-image {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.background-image .mat-card-image {
+    margin-bottom: 0px;
+    border-radius: 10px;
+    ;
+}
+
+.id {
+    font-size: 22px;
+    margin-left: 20px;
+    text-align: right;
+    display: inline-flex;
+}
+
+.mat-card-content {
+    margin: 0;
+}
+
+.mat-card-content .types {
+    display: inline-flex;
+    margin: 15px 10px 5px 0px;
+    padding: 5px 10px;
+    text-shadow: black 1px 1px 1px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.mat-card-image:first-child {
+    margin-top: 0px !important;
+}
+
+.mat-card-image {
+    width: 100% !important;
+    margin: 0 -16px 16px -16px;
+}
+
+
+/** Niveles*/
+
+.training,
+.rookie,
+.mega,
+.champion,
+.ultimate,
+.fresh {
+    animation: gradient 6s linear infinite;
+    animation-direction: alternate;
+}
+
+.training {
+    background: linear-gradient(45deg, rgb(131, 241, 88), rgba(36, 185, 103, 0.993), rgb(0, 255, 234));
+    background-size: 600% 100%;
+}
+
+.rookie {
+    background: linear-gradient(45deg, rgb(22, 48, 194), rgba(36, 180, 185, 0.993), rgb(176, 106, 233));
+    background-size: 600% 100%;
+}
+
+.mega {
+    background: linear-gradient(45deg, rgb(18, 150, 51), rgba(110, 0, 253, 0.993), rgb(12, 218, 245));
+    background-size: 600% 100%;
+}
+
+.champion {
+    background: linear-gradient(45deg, rgb(184, 154, 22), rgba(221, 149, 15, 0.993), rgb(175, 245, 12));
+    background-size: 600% 100%;
+}
+
+.ultimate {
+    background: linear-gradient(45deg, rgb(119, 31, 146), rgba(221, 15, 84, 0.993), rgb(121, 12, 245));
+    background-size: 600% 100%;
+}
+
+.fresh {
+    background: linear-gradient(45deg, rgb(180, 58, 58), rgba(200, 221, 15, 0.993), rgb(54, 185, 37));
+    background-size: 600% 100%;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0%
+    }
+    100% {
+        background-position: 100%
+    }
+}

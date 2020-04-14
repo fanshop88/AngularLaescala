@@ -1,0 +1,25 @@
+<div class="loading" *ngIf="!digimonLoaded">
+    <mat-spinner></mat-spinner>
+    CARGANDO...
+</div>
+
+<div style="text-align:center">
+    <div class="grid-layout" *ngIf="digimons">
+        <div *ngFor="let digimon of digimons | searchFilter: query | levelFilter: levelsFilter">
+            <mat-card class="digimon-card">
+                <mat-card-title>{{ digimon.name | titlecase }}</mat-card-title>
+                <div class="id">{{ digimon.id }}</div>
+                <div class="background-image">
+                    <img mat-card-image class="smooth" src="{{ digimon.img }}" alt="Foto de {{ digimon.name }}" />
+                </div>
+                <mat-card-content>
+                    <div style="display: block;">
+                        <div class="types {{_getTypeColour(digimon.level)}}">
+                            {{ digimon.level | titlecase }}
+                        </div>
+                    </div>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+</div>
