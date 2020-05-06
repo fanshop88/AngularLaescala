@@ -1,0 +1,19 @@
+<section class="text-center">
+    <div class="container">
+        <h1>Rick And Morty</h1>
+        <p class="lead text-muted">Una serie fuera de tiempo</p>
+        <div class="input-group mb-3">
+            <input [(ngModel)]="filters.name" (blur)="changeFilter()" type="text" class="form-control" placeholder="Morty, Rick, Summer..." aria-label="Morty, Rick, Summer..." aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+        </div>
+        <select class="custom-select" [(ngModel)]="filters.gender" (change)="changeFilter()">
+            <option selected value="">Genero</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="genderless">genderless</option>
+            <option value="unknown">unknown</option> 
+        </select>
+    </div>
+</section>

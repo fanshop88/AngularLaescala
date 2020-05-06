@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class EpisodesService {
+
+  constructor(private http: HttpClient) { 
+
+  }
+  
+  findEpisodesBySeasson(seasson: string) {
+    return this.http.get<any>(`${environment.RICKANDMORTY_API}/episode?episode=${seasson}`);
+  }
+
+}

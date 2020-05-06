@@ -1,0 +1,18 @@
+<app-search (onChangeFilter)="getFilters($event)" class="d-flex flex-column flex-md-row align-items-center justify-content-center jumbotron mb-0 bg-ram"></app-search>
+
+<section class="container-fluid py-5 bg-light border-radius">
+    <div class="container">
+        <div class="loading" *ngIf="!characterLoaded">
+            CARGANDO... <i class="fa fa-circle-o-notch fa-spin"></i>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" *ngIf="characters">
+            <app-characters class="col mb-3 mt-10" *ngFor="let character of characters | paginate: { id: 'idPagina', 
+            itemsPerPage: pageSize, 
+            currentPage: pageNum, 
+            totalItems: totalCharacter }" [character]="character"></app-characters>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <pagination-controls (pageChange)="pageChange($event)" previousLabel="Back" nextLabel="Next" id="idPagina"></pagination-controls>
+        </div>
+    </div>
+</section>

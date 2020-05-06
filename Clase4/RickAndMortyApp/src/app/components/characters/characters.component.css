@@ -1,0 +1,13 @@
+img {
+    border-radius: 176px;
+    position: absolute;
+    top: -110px;
+    border: double 4px transparent;
+    border-radius: 80px;
+    background-image: linear-gradient(white, white), radial-gradient(circle at top left, rgb(10, 161, 47), #79ff20);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    width: 120px;
+    z-index: 0;
+    box-shadow: 0 0px 14px -6px rgba(102, 247, 12, 0.58);
+}
